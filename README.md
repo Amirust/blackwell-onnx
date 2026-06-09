@@ -20,11 +20,11 @@ export ORT_DYLIB_PATH=/path/to/onnx/libonnxruntime.so
 ## Building
 
 Built from [microsoft/onnxruntime](https://github.com/microsoft/onnxruntime) with
-[`../build_ort_cuda.sh`](../build_ort_cuda.sh). The build runs inside an NVIDIA CUDA
+[`./build_ort_cuda.sh`](./build_ort_cuda.sh). The build runs inside an NVIDIA CUDA
 container, so only Docker is required on the host (no GPU needed to compile).
 
 ```bash
-../build_ort_cuda.sh
+./build_ort_cuda.sh
 ```
 
 ## Special Thanks
