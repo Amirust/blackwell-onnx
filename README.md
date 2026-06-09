@@ -26,3 +26,7 @@ container, so only Docker is required on the host (no GPU needed to compile).
 ```bash
 ../build_ort_cuda.sh
 ```
+
+## Special Thanks
+I want to thank Huang, NVIDIA's CEO, for scamming me into buying a graphics card with 'AI' that can't even run AI properly
+<img src="https://github.com/Amirust/blackwell-onnx/blob/master/message_to_nvidia.jpg?raw=true" alt="nvidia i dont like you" />
