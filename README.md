@@ -1,2 +1,28 @@
-# blackwell-onnx
-ONNX .so libraries for RTX 50 / Nvidia Blackwell
+# ONNX Runtime (CUDA, Blackwell / sm_120)
+
+Prebuilt ONNX Runtime shared libraries with the CUDA execution provider, compiled
+for **Blackwell GPUs (sm_120 / RTX 50 series)**.
+
+```
+libonnxruntime.so(.*)               core library — point ORT_DYLIB_PATH here
+libonnxruntime_providers_shared.so
+libonnxruntime_providers_cuda.so    CUDA execution provider
+```
+
+## Usage
+
+Load via the `ort` crate's `load-dynamic` feature and set the path:
+
+```bash
+export ORT_DYLIB_PATH=/path/to/onnx/libonnxruntime.so
+```
+
+## Building
+
+Built from [microsoft/onnxruntime](https://github.com/microsoft/onnxruntime) with
+[`../build_ort_cuda.sh`](../build_ort_cuda.sh). The build runs inside an NVIDIA CUDA
+container, so only Docker is required on the host (no GPU needed to compile).
+
+```bash
+../build_ort_cuda.sh
+```
